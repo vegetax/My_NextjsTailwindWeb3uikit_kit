@@ -1,5 +1,9 @@
-# Next.js-React
-a start kit for nextjs and react
+1. 克隆仓库
+2. yarn install
+3. yarn run dev  就可以使用了
+
+
+# 如需从0自己安装：
 
 #### 创建React & nextJs 工程
 https://nextjs.org/learn/basics/create-nextjs-app/setup
