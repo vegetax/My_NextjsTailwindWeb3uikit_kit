@@ -1,11 +1,19 @@
 import "../styles/globals.css"
 import { NotificationProvider } from "@web3uikit/core"
+import { MoralisProvider } from "react-moralis"
+import { MainProvider } from "../components/MainProvider"
 
 function MyApp({ Component, pageProps }) {
     return (
-        <NotificationProvider>
-            <Component {...pageProps} />
-        </NotificationProvider>
+        <>
+            <MoralisProvider initializeOnMount={false}>
+                <NotificationProvider>
+                    <MainProvider>
+                        <Component {...pageProps} />
+                    </MainProvider>
+                </NotificationProvider>
+            </MoralisProvider>
+        </>
     )
 }
 
