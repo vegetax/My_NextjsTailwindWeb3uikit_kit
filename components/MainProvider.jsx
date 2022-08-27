@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react"
 import { useMoralisWeb3Api, useMoralis } from "react-moralis"
+
 import { useNotification } from "@web3uikit/core"
 
 export const TransactionContext = React.createContext()
@@ -14,9 +15,8 @@ export const MainProvider = ({ children }) => {
         // user,
         // account,
         // chainId,
-        // logout,
-        // enableWeb3,
-        // isWeb3Enabled,
+        enableWeb3,
+        isWeb3Enabled,
     } = useMoralis()
     // const FireAddress = "0x557555c030b28E62AC41851074Cb67584D7815A4"
     // const BadgesAddress = "0x2f973f35887ceF7D52B849924f43C6FEAe32DD57"
@@ -28,20 +28,18 @@ export const MainProvider = ({ children }) => {
 
     return (
         <TransactionContext.Provider
-            value={
-                {
-                    // Moralis,
-                    // isInitialized,
-                    // authenticate,
-                    // isAuthenticated,
-                    // isAuthenticating,
-                    // user,
-                    // account,
-                    // chainId,
-                    // logout,
-                    // enableWeb3,
-                }
-            }
+            value={{
+                // Moralis,
+                // isInitialized,
+                // authenticate,
+                // isAuthenticated,
+                // isAuthenticating,
+                // user,
+                // account,
+                // chainId,
+                enableWeb3,
+                isWeb3Enabled,
+            }}
         >
             {children}
         </TransactionContext.Provider>

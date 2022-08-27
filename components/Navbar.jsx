@@ -1,10 +1,10 @@
 import React, { useContext } from "react"
 import { ConnectButton } from "@web3uikit/web3"
-
 import { useNotification, Button } from "@web3uikit/core"
+import { TransactionContext } from "./MainProvider"
 
 export const Navbar = () => {
-    // const { enableWeb3 } = useContext(TransactionContext)
+    const { logout, enableWeb3, isWeb3Enabled } = useContext(TransactionContext)
     const dispatch = useNotification()
 
     const handleNewNotification = () => {
@@ -19,7 +19,6 @@ export const Navbar = () => {
     // const { debugmune, setDebugMune } = useContext(TransactionContext)
     return (
         <div className="fixed top-0 left-0 h-16  w-screen  z-50    ">
-            sdsds
             <Button
                 text="Test"
                 onClick={handleNewNotification}
@@ -30,9 +29,14 @@ export const Navbar = () => {
             <Button
                 onClick={async () => {
                     await enableWeb3()
+                    console.log(isWeb3Enabled)
                 }}
             />
-            {/* <WalletModal isOpened setIsOpened={function noRefCheck() {}} /> */}
+            <Button
+                onClick={async () => {
+                    await logout()
+                }}
+            />
             <ConnectButton moralisAuth={false} chainId={4} />
         </div>
     )

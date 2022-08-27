@@ -1,0 +1,22 @@
+[
+    { "type": "constructor", "payable": false, "inputs": [{ "type": "uint256", "name": "_a" }] },
+    {
+        "type": "function",
+        "name": "setValue",
+        "constant": false,
+        "payable": false,
+        "gas": 29000000,
+        "inputs": [{ "type": "uint256", "name": "_x" }],
+        "outputs": [{ "type": "uint256" }]
+    },
+    {
+        "type": "function",
+        "name": "test",
+        "constant": true,
+        "stateMutability": "view",
+        "payable": false,
+        "gas": 29000000,
+        "inputs": [],
+        "outputs": [{ "type": "uint256" }]
+    }
+]
