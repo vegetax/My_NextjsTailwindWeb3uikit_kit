@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@superfluid-finance/sdk-core": "^0.5.4",
     "@web3auth/web3auth": "^1.2.4",
     "@web3uikit/core": "^0.1.5",
     "@web3uikit/icons": "^0.1.5",
     "@web3uikit/web3": "^0.1.5",
+    "graphql": "^16.6.0",
     "magic-sdk": "7.0.0",
     "moralis": "^2.1.1",
     "next": "12.2.5",
